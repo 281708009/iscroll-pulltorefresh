@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>iscroll-pulltorefresh Test</title>
+    <link rel="stylesheet" media="screen" href="iscroll.pulltorefsh.css">
+    <style>
+        @keyframes example {
+            0%   {margin-left: 0px;}
+            50%  {margin-left: 100px;}
+            100% {margin-left: 0px;}
+        }
+
+        li {
+            font-size: 17px;
+            animation-name: example;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="toscroll">
+    <li class="	l1	">	1	</li>
+    <li class="	l2	">	2	</li>
+    <li class="	l3	">	3	</li>
+    <li class="	l4	">	4	</li>
+    <li class="	l5	">	5	</li>
+    <li class="	l6	">	6	</li>
+    <li class="	l7	">	7	</li>
+    <li class="	l8	">	8	</li>
+    <li class="	l9	">	9	</li>
+    <li class="	l10	">	10	</li>
+    <li class="	l11	">	11	</li>
+    <li class="	l12	">	12	</li>
+    <li class="	l13	">	13	</li>
+    <li class="	l14	">	14	</li>
+    <li class="	l15	">	15	</li>
+    <li class="	l16	">	16	</li>
+    <li class="	l17	">	17	</li>
+    <li class="	l18	">	18	</li>
+    <li class="	l19	">	19	</li>
+    <li class="	l20	">	20	</li>
+    <li class="	l21	">	21	</li>
+    <li class="	l22	">	22	</li>
+    <li class="	l23	">	23	</li>
+    <li class="	l24	">	24	</li>
+    <li class="	l25	">	25	</li>
+    <li class="	l26	">	26	</li>
+    <li class="	l27	">	27	</li>
+    <li class="	l28	">	28	</li>
+    <li class="	l29	">	29	</li>
+    <li class="	l30	">	30	</li>
+    <li class="	l31	">	31	</li>
+    <li class="	l32	">	32	</li>
+    <li class="	l33	">	33	</li>
+    <li class="	l34	">	34	</li>
+    <li class="	l35	">	35	</li>
+    <li class="	l36	">	36	</li>
+    <li class="	l37	">	37	</li>
+    <li class="	l38	">	38	</li>
+    <li class="	l39	">	39	</li>
+    <li class="	l40	">	40	</li>
+</ul>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="iscroll.js"></script>
+<script type="text/javascript" src="iscroll-probe.js"></script>
+<script type="text/javascript" src="iscroll.pulltorefsh.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        for (var i=1; i<=100; i++) {
+            $(".l" + i).css("animation-delay", (0.1 * i) + "s");
+        }
+
+        var obj = null;
+
+        var onRefresh = function() {
+            alert("bingo!");
+
+            setTimeout(function(){
+                obj.notifyRefreshDone();
+            }, 618)
+        };
+
+        obj = new IScrollPullToRefresh($("#toscroll"), onRefresh, {});
+    });
+
+</script>
+</body>
+</html>

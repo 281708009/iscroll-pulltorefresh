@@ -1,0 +1,23 @@
+.scrollWrapper{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scrollContainer{
+    position: absolute;
+    width: 100%;
+}
+
+.pullIndicator{
+    height: 100px; /* the value must match with the refreshIndicatorHeight inside Javascript */
+    line-height: 100px;
+    text-align: center;
+    margin: 0;
+    background-color: #555;
+    color: #fff;
+    font-size: 20px;
+}
