@@ -24,4 +24,4 @@ As simple as:
 	
 	</script>
 
-![image](https://raw.githubusercontent.com/albert-zhang/iscroll-pulltorefresh/master/screenshot.png)
+![image](https://raw.githubusercontent.com/albert-zhang/iscroll-pulltorefresh/master/screenshot.jpg)
